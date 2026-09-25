@@ -8,5 +8,12 @@
     platform = "x86_64-darwin";
   };
   # MBA2020
-  "foundry" = { };
+  "foundry" = {
+    modules = [
+      self.darwinModules.default
+      {
+        "x86_64-linux-builder".bootstrap = false;
+      }
+    ];
+  };
 }

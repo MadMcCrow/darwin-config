@@ -17,9 +17,12 @@ let
   repo = "github:MadMcCrow/darwin-config";
 in
 writeShellApplication {
-          name = "darwin-update";
-          runtimeInputs = [ nix just];
-          text = ''
-              sudo darwin-rebuild --flake ${repo}#${system} switch
-          '';
-        };
+  name = "darwin-update";
+  runtimeInputs = [
+    nix
+    just
+  ];
+  text = ''
+    sudo darwin-rebuild --flake ${repo}#${system} switch
+  '';
+}

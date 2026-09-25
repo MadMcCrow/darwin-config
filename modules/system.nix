@@ -1,5 +1,11 @@
 # main darwin system configuration
-{ pkgs, self, lib, ... }: {
+{
+  pkgs,
+  self,
+  lib,
+  ...
+}:
+{
   config = {
     environment.systemPackages = with pkgs; [
       nano
@@ -16,7 +22,10 @@
         };
       in
       {
-        settings.experimental-features = lib.mkDefault ["nix-command" "flakes"];
+        settings.experimental-features = lib.mkDefault [
+          "nix-command"
+          "flakes"
+        ];
         gc = {
           automatic = true;
           interval = [ frequency ];

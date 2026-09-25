@@ -14,7 +14,7 @@ let
     name:
     {
       platform ? "aarch64-darwin",
-      modules ? [ self.darwinModules.default  ],
+      modules ? [ self.darwinModules.default ],
       ...
     }:
     inputs.nix-darwin.lib.darwinSystem {
@@ -23,7 +23,8 @@ let
           system = platform;
         };
         inherit inputs self;
-      };
+      }
+      // inputs;
       modules = modules ++ [
         {
           nixpkgs.hostPlatform = platform;
