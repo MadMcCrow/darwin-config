@@ -1,9 +1,12 @@
 # list of hosts
-_ :
-{
+{ self, ... }: {
   # default apple silicon config
-  "default" = {
+  "apple-silicon" = {
     platform = "aarch64-darwin";
-    };
-  "foundry" = { }; # MBA2020
+  };
+  "intel" = {
+    platform = "x86_64-darwin";
+  };
+  # MBA2020
+  "foundry" = { };
 }

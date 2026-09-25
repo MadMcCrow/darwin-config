@@ -1,5 +1,6 @@
 # main darwin system configuration
-{pkgs, ...} : {
+{ pkgs, self, lib, ... }: {
+  config = {
     environment.systemPackages = with pkgs; [
       nano
       wget
@@ -15,7 +16,7 @@
         };
       in
       {
-        settings.experimental-features = "nix-command flakes";
+        settings.experimental-features = lib.mkDefault ["nix-command" "flakes"];
         gc = {
           automatic = true;
           interval = [ frequency ];
@@ -49,4 +50,5 @@
     };
     # The platform the configuration will be used on.
     nixpkgs.hostPlatform = "aarch64-darwin";
+  };
 }
