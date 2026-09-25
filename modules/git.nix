@@ -7,7 +7,7 @@
 {
   # Build darwin flake using:
   # $ darwin-rebuild build --flake .#default
-  flake.darwinModules."git" = {
+  flake.darwinModules."git" = {pkgs, ...} : {
     # add a global "macOS" gitignore
     environment.etc."git/.gitignore".text = ''
       *~

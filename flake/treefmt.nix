@@ -1,5 +1,5 @@
-# specify how to format the repository
-# flake part module for apps
+# treefmt
+# flake part module for formatting the repository
 {
   withSystem,
   inputs,

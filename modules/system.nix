@@ -1,13 +1,5 @@
 # main darwin system configuration
-{
-  pkgs,
-  self,
-  ...
-}:
-{
-  # Build darwin flake using:
-  # $ darwin-rebuild build --flake .#default
-  flake.darwinModules."default" = {
+{pkgs, ...} : {
     environment.systemPackages = with pkgs; [
       nano
       wget
@@ -57,5 +49,4 @@
     };
     # The platform the configuration will be used on.
     nixpkgs.hostPlatform = "aarch64-darwin";
-  };
 }

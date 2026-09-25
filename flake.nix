@@ -31,13 +31,15 @@
     flake-parts.lib.mkFlake { inherit inputs; } (
       { lib, ... }: {
         # this is done to avoid spamming until things are stabilized
-        systems = [
+        config.systems = [
           "aarch64-darwin"
         ]; # lib.systems.flakeExposed;
 
+        # expose darwin flake options
+
+
         imports = [
-          (import-tree ./modules)
-          ./hosts
+          (import-tree ./flake)
         ];
       }
     );
