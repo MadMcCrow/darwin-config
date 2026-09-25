@@ -1,0 +1,18 @@
+# ignore any result from flake evaluation :
+result
+
+# ignore macos files
+**/.DS_Store
+
+# ignore built virtual machines
+*.qcow2
+
+# ignore hidden files (except git, just and env files)
+.*
+!.git*
+!.pre-commit*
+!.just*
+!.env
+
+# log files
+*.log
