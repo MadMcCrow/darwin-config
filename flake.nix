@@ -37,7 +37,7 @@
 
         imports = [
           (import-tree ./modules)
-          ./configuration.nix
+          ./hosts
         ];
       }
     );

@@ -27,6 +27,6 @@
     # set git config environment variable
     environment.variables = {
       "GIT_CONFIG" = "/etc/git/config";
-    }
+    };
   };
 }
