@@ -15,6 +15,8 @@
            	excludesfile = /etc/git/.gitignore
         [help]
             autocorrect = 1
+        [push]
+          autoSetupRemote = 1
         [color]
             ui = true
       '';
