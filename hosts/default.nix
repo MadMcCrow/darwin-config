@@ -1,7 +1,9 @@
 # list of hosts
 _ :
-[
-    {
-      name = "foundry"; # MBA2020
-    }
-]
+{
+  # default apple silicon config
+  "default" = {
+    platform = "aarch64-darwin";
+    };
+  "foundry" = { }; # MBA2020
+}
