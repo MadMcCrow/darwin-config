@@ -6,7 +6,7 @@ in
 {
   nix = {
     linux-builder = {
-      inherit package;
+      # inherit package;
       enable = true;
       ephemeral = true;
       # maxJobs = 4;

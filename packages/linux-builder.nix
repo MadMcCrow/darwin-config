@@ -6,6 +6,7 @@
   ...
 }:
 darwin.linux-builder.override {
+  allowSubstitutes = true;
   modules = [
     {
       nix = {
@@ -16,10 +17,10 @@ darwin.linux-builder.override {
       # expose x86_64-linux
       boot.binfmt.emulatedSystems = [ "x86_64-linux" ];
       # force Apple's vGIC
-      virtualisation.qemu.options = [
-        "-machine"
-        "virt"
-      ];
+      #virtualisation.qemu.options = [
+      #  "-machine"
+      #  "virt"
+      #];
     }
   ];
 }
